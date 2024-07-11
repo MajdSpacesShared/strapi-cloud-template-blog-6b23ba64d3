@@ -1,11 +1,10 @@
 {
-  "kind": "singleType",
-  "collectionName": "homes",
+  "kind": "collectionType",
+  "collectionName": "person_informations",
   "info": {
-    "singularName": "home",
-    "pluralName": "homes",
-    "displayName": "Home",
-    "description": ""
+    "singularName": "person-information",
+    "pluralName": "person-informations",
+    "displayName": "PersonInformation"
   },
   "options": {
     "draftAndPublish": true
@@ -16,7 +15,7 @@
     }
   },
   "attributes": {
-    "Title": {
+    "name": {
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -25,35 +24,36 @@
       "type": "string",
       "required": true
     },
-    "Paragraph": {
+    "paragraph": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "text",
-      "required": true
+      "type": "text"
     },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
+    "profilepicture": {
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
+      "type": "media",
+      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "articles": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article"
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }
